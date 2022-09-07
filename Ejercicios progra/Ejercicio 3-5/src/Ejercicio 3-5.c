@@ -1,17 +1,13 @@
 /*
- ============================================================================
- Name        : 3-5.c
- Author      : 
- Version     :
- Copyright   : Your copyright notice
- Description : Ejercicio 3-5: Realizar un programa en donde
- se puedan utilizar los prototipos de la función Restar en sus 4 combinaciones.
- .int Restar1(int, int);
- .int Restar2(void);
- .void Restar3(int, int);
- .void Restar4(void);
- ============================================================================
- */
+Ledesma Inti
+
+Ejercicio 3-5: Realizar un programa en donde
+se puedan utilizar los prototipos de la función Restar en sus 4 combinaciones.
+.int Restar1(int, int);
+.int Restar2(void);
+.void Restar3(int, int);
+.void Restar4(void);
+*/
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -74,6 +70,10 @@ int main()
 
 			Restar4();
 			break;
+
+		default:
+			printf("La opción seleccionada no existe");
+			break;
 	}
 
 	return 0;
@@ -82,7 +82,9 @@ int main()
 int Restar1(int a, int b)
 {
 	int resultado;
+
 	resultado = a - b;
+
 	return resultado;
 }
 
@@ -99,13 +101,16 @@ int Restar2(void)
 	scanf("%d",&num2);
 
 	resultado = num1 - num2;
+
 	return resultado;
 }
 
 void Restar3(int a, int b)
 {
 	int resultado;
+
 	resultado = a - b;
+
 	printf("El resultado es: %d",resultado);
 }
 
@@ -120,6 +125,8 @@ void Restar4(void)
 
 	printf("Ingrese el segundo número: ");
 	scanf("%d",&num2);
+
 	resultado = num1 - num2;
+
 	printf("El resultado es: %d",resultado);
 }
